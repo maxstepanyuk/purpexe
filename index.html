@@ -11,17 +11,54 @@
             color-scheme: dark light;
         }
 
+        :root {
+            --text-color: #000000;
+            --bg-color: #ffffff;
+            --hr-color: #eeeeee;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #eeeeee;
+                --bg-color: #050505;
+                --hr-color: #5e5e5e;
+            }
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             max-width: 25rem;
             margin: auto;
             padding: 0rem 1rem;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        hr {
+            color: var(--hr-color);
+            opacity: 0.5;
+        }
+
+        h1,
+        a {
+            color: var(--text-color);
+            background-color: transparent;
         }
 
         h1 {
             font-weight: bold;
             font-size: 4rem;
+        }
+
+        a {
+            padding: 0.3rem;
+            border-radius: 0.2rem;
+        }
+
+        a:hover {
+            color: var(--bg-color);
+            background-color: var(--text-color);
         }
     </style>
 </head>
